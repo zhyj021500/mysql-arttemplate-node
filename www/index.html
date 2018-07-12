@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        li:hover {
+            background-color: yellowgreen;
+        }
+
+        img {
+            display: block;
+            width: 160px;
+            height: 160px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        {{each results}}
+            <li>
+                <img src="{{$value.icon}}" alt="">
+                <a href="#">{{$value.name}}</a>
+            </li>
+        {{/each}}
+      
+    </ul>
+</body>
+
+</html>
